@@ -1,21 +1,21 @@
+import { useState } from "react";
+
+
 const Home = () => {
 
+    
+    const [name , setName] = useState('hi');
 
-    const clickHandel = (e) =>{
-      console.log("hello , niggas" , e);
+    const chanveValue = () =>{
+           setName('fuck off');
     }
-
-    const handelClickAgian = (res,e) =>{
-      console.log("hello " + res ,e.target);
-  }
 
     return (
 
       <div className="Home">
-      <h2>home page</h2>
+      <h2>{name}</h2>
       
-      <button onClick={clickHandel}>click me</button>
-      <button  onClick={(e)=>{handelClickAgian("mario",e)}}> click me again</button>
+      <button onClick={chanveValue}>click me</button>
       
       </div>
       
